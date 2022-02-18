@@ -1,3 +1,19 @@
 import 'package:flutter/material.dart';
 
-Text bolttext (Text text, int size) => const Text('text',);
+Widget bolttext({required String text, double size = 14}) => Text(
+      text,
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: size,
+      ),
+    );
+
+Widget greytext({required String text, double size = 14}) => Text(
+      text,
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        color: Colors.grey,
+        fontSize: size,
+      ),
+    );
