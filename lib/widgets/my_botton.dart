@@ -47,7 +47,7 @@ Widget myGoogleBotton() => Padding(
             height: 28,
             width: 28,
             child: const CircleAvatar(
-              backgroundImage: AssetImage('assets/images/google.png'),
+              backgroundImage: AssetImage('assets/icons/google.png'),
               radius: 20,
             ),
             decoration: const BoxDecoration(

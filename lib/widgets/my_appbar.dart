@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food/core/constants/color_const.dart';
 
-PreferredSizeWidget myAppBar(
-        {Widget title = const Text(''), List<Widget>? listIcon}) =>
+PreferredSizeWidget myAppBar({BuildContext? context,
+        Widget title = const Text(''), List<Widget>? listIcon}) =>
     AppBar(
       toolbarHeight: 44,
       backgroundColor: Colors.transparent,
@@ -11,10 +11,18 @@ PreferredSizeWidget myAppBar(
         color: ColorConst.blackColor,
         icon: const Icon(
           Icons.arrow_back_ios_outlined,
+
         ),
-        onPressed: () {},
+        
+        onPressed: () {
+          
+          Navigator.pop(context!);
+        },
       ),
+
       title: title,
       centerTitle: true,
+
+      //5 sahifadagi appbar uchun iconlar
       actions: listIcon,
     );

@@ -4,7 +4,6 @@ import 'package:food/core/constants/color_const.dart';
 import 'package:food/widgets/Texts.dart';
 import 'package:food/widgets/my_botton.dart';
 import 'package:food/widgets/my_text_from_fild.dart';
-
 import '../widgets/my_appbar.dart';
 
 class SignInPage extends StatelessWidget {
@@ -43,7 +42,7 @@ class SignInPage extends StatelessWidget {
               ],
             ),
             mytextfromfild(myhintText: "Name"),
-            mytextfromfild(myhintText: "Password"),
+            mytextfromfild(myhintText: "Password",scureText: true),
             Padding(
               padding:
                   const EdgeInsets.symmetric(vertical: 20, horizontal: 110),

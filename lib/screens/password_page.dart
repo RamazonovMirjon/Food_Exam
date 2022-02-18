@@ -12,7 +12,7 @@ class PasswordPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: myAppBar(title: bolttext(text: "Forgot Password", size: 16)),
+      appBar: myAppBar(context: context,title: bolttext(text: "Forgot Password", size: 16)),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(

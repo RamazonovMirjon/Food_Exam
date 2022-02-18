@@ -11,10 +11,10 @@ class MyRoute {
       case '/':
         return MaterialPageRoute(builder: (context) => const WalkThroughPage());
       case '/signin':
-        return MaterialPageRoute(builder: (context) => SignInPage());
+        return MaterialPageRoute(builder: (context) => const SignInPage());
       case '/signup':
-        return MaterialPageRoute(builder: (context) => PasswordPage());
-      
+        return MaterialPageRoute(builder: (context) => const PasswordPage());
     }
+    return null;
   }
 }

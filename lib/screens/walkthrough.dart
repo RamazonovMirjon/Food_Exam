@@ -13,28 +13,23 @@ class _WalkThroughPageState extends State<WalkThroughPage> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
-      return Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (_) => SignInPage(),
-        ),
-      );
+    Future.delayed(const Duration(seconds: 3), () {
+      return Navigator.pushReplacementNamed(context, '/signin');
     });
-    setState(() {
-      
-    });
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Column(
         children: [
-          Padding(
-            padding: EdgeInsets.only(left: 34, top: 68.75, right: 33.46),
+          const Padding(
+            padding: EdgeInsets.only(left: 34.0, top: 68.7, right: 33.46),
             child: SizedBox(
-              height: MediaQuery.of(context).size.height * 0.5,
+              height: 362.4,
+              width: 307.5,
               child: Image(
                 fit: BoxFit.cover,
                 image: AssetImage("assets/images/pizza.png"),
