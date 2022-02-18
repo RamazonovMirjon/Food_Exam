@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
 
-Widget bolttext({required String text, double size = 14}) => Text(
+Widget bolttext({
+  required String text,
+  double size = 14,
+  Color color = const Color(0xFF010F07),
+}) =>
+    Text(
       text,
       textAlign: TextAlign.center,
-      style: TextStyle(
-        fontWeight: FontWeight.bold,
-        fontSize: size,
-        color: Colors.black
-      ),
+      style:
+          TextStyle(fontWeight: FontWeight.bold, fontSize: size, color: color),
     );
 
-Widget greytext({required String text, double size = 14}) => Text(
+Widget greytext({
+  required String text,
+  double size = 14,
+    Color color = const Color(0xFF868686),
+
+}) =>
+    Text(
       text,
       textAlign: TextAlign.center,
       style: TextStyle(
-        color: Colors.grey,
+        color: color,
         fontSize: size,
       ),
     );

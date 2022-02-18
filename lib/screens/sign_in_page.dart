@@ -9,7 +9,43 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myAppBar(title: bolttext(text: "Sign In",size: 16)),
+      appBar: myAppBar(title: bolttext(text: "Sign In", size: 16)),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            bolttext(text: "Welcome to", size: 34),
+            Padding(
+              padding: const EdgeInsets.only(top: 10, bottom: 2),
+              child:
+                  greytext(text: "Enter your Phone number or Email", size: 16),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  greytext(text: "for sign in, Or ", size: 16),
+                  greytext(
+                      text: "Create new account.",
+                      size: 16,
+                      color: const Color(0xFF22A45D)),
+                ],
+              ),
+            ),
+            Card(
+              color: Color(0xFFFBFBFB),
+              margin: const EdgeInsets.symmetric(vertical: 14),
+              child: const ListTile(),
+            ),
+            const Card(
+              child: ListTile(),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
