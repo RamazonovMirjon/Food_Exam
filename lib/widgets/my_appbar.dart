@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food/core/constants/color_const.dart';
 
 PreferredSizeWidget myAppBar(
         {Widget title = const Text(''), List<Widget>? listIcon}) =>
@@ -7,7 +8,7 @@ PreferredSizeWidget myAppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
       leading: IconButton(
-        color: const Color(0xFF010F07),
+        color: ColorConst.blackColor,
         icon: const Icon(
           Icons.arrow_back_ios_outlined,
         ),

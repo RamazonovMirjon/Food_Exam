@@ -15,7 +15,7 @@ Widget bolttext({
 Widget greytext({
   required String text,
   double size = 14,
-    Color color = const Color(0xFF868686),
+    Color color = const Color(0xFF010F07),
 
 }) =>
     Text(

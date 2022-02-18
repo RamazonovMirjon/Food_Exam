@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food/core/constants/color_const.dart';
 import 'package:food/widgets/Texts.dart';
 
 import '../widgets/my_appbar.dart';
@@ -31,12 +32,12 @@ class SignInPage extends StatelessWidget {
                   greytext(
                       text: "Create new account.",
                       size: 16,
-                      color: const Color(0xFF22A45D)),
+                      color: ColorConst.blueColor),
                 ],
               ),
             ),
             Card(
-              color: Color(0xFFFBFBFB),
+              color: ColorConst.cardColor,
               margin: const EdgeInsets.symmetric(vertical: 14),
               child: const ListTile(),
             ),
