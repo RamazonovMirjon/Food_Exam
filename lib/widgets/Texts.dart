@@ -6,6 +6,7 @@ Widget bolttext({required String text, double size = 14}) => Text(
       style: TextStyle(
         fontWeight: FontWeight.bold,
         fontSize: size,
+        color: Colors.black
       ),
     );
 

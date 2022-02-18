@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food/screens/sign_in_page.dart';
 import 'package:food/screens/walkthrough.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         
         primarySwatch: Colors.blue,
       ),
-      home: const WalkThroughPage(),
+      home: const SignInPage(),
     );
   }
 }
