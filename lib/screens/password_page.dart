@@ -3,7 +3,6 @@ import 'package:food/core/constants/color_const.dart';
 import 'package:food/widgets/Texts.dart';
 import 'package:food/widgets/my_botton.dart';
 import 'package:food/widgets/my_text_from_fild.dart';
-
 import '../widgets/my_appbar.dart';
 
 class PasswordPage extends StatelessWidget {
@@ -42,7 +41,7 @@ class PasswordPage extends StatelessWidget {
             mytextfromfild(myhintText: "Full Name"),
             mytextfromfild(myhintText: "Email Address"),
             mytextfromfild(myhintText: "Password", scureText: true),
-            myBotton(color: ColorConst.blackColor, title: "SIGG UP"),
+            myBotton(title: "SIGG UP"),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: greytext(
@@ -55,8 +54,8 @@ class PasswordPage extends StatelessWidget {
                   const EdgeInsets.symmetric(vertical: 10, horizontal: 147),
               child: greytext(text: "Or", size: 16),
             ),
-            myFacebookBotton(color: Colors.black),
-            
+            myFacebookBotton(),
+            myGoogleBotton(),
           ],
         ),
       ),

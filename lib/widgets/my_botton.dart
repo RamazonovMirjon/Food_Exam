@@ -3,20 +3,20 @@ import '../core/constants/color_const.dart';
 import 'Texts.dart';
 
 
-//Sing in buttoni
-Widget myBotton({required Color color, required String title}) => Card(
-      color: color,
+//Sing in va Sign up buttoni
+Widget myBotton({required String title}) => Card(
+      color: ColorConst.greenColor,
       child: ListTile(
-        title: bolttext(text: title, color: Colors.white),
+        title: bolttext(text: title, color: ColorConst.whiteColor),
         onTap: () {},
       ),
     );
 
 
-//facebook bottoni ikki joyda va rangi harxil bulgani
+//facebook bottoni ikki joydaligi
 // uchun alohida nethod qildim.
-Widget myFacebookBotton({required Color color}) => Card(
-      color: color,
+Widget myFacebookBotton() => Card(
+      color: ColorConst.blueDarkColor,
       child: ListTile(
         leading: Container(
           height: 28,
@@ -27,12 +27,12 @@ Widget myFacebookBotton({required Color color}) => Card(
           child: Center(
               child: Icon(
             Icons.facebook_sharp,
-            color: color,
+            color: ColorConst.blueDarkColor,
           )),
         ),
         title: bolttext(
             text: "CONNECT WITH FACEBOOK",
-            color: Colors.white,
+            color: ColorConst.whiteColor,
             align: TextAlign.start),
         onTap: () {},
       ),
@@ -56,7 +56,7 @@ Widget myGoogleBotton() => Padding(
           ),
           title: bolttext(
               text: "CONNECT WITH GOOGLE",
-              color: Colors.white,
+              color: ColorConst.whiteColor,
               align: TextAlign.start),
           onTap: () {},
         ),

@@ -1,6 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food/core/constants/color_const.dart';
 import 'package:food/widgets/Texts.dart';
+import 'package:food/widgets/my_botton.dart';
+import 'package:food/widgets/my_text_from_fild.dart';
 
 import '../widgets/my_appbar.dart';
 
@@ -10,6 +13,7 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: myAppBar(title: bolttext(text: "Sign In", size: 16)),
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -19,87 +23,40 @@ class SignInPage extends StatelessWidget {
           children: [
             bolttext(text: "Welcome to", size: 34),
             Padding(
-              padding: const EdgeInsets.only(top: 10, bottom: 2),
+              padding: const EdgeInsets.only(top: 10),
               child:
                   greytext(text: "Enter your Phone number or Email", size: 16),
             ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  greytext(text: "for sign in, Or ", size: 16),
-                  greytext(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                greytext(text: "for sign in, Or ", size: 16),
+                CupertinoButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/signup');
+                  },
+                  child: greytext(
                       text: "Create new account.",
                       size: 16,
                       color: ColorConst.blueColor),
-                ],
-              ),
+                ),
+              ],
             ),
-            Card(
-              color: ColorConst.cardColor,
-              margin: const EdgeInsets.symmetric(vertical: 14),
-              child: ListTile(
-                onTap: () {},
-              ),
-            ),
-            Card(
-              color: ColorConst.cardColor,
-              child: ListTile(
-                onTap: () {},
-              ),
-            ),
+            mytextfromfild(myhintText: "Name"),
+            mytextfromfild(myhintText: "Password"),
             Padding(
               padding:
                   const EdgeInsets.symmetric(vertical: 20, horizontal: 110),
               child: greytext(text: "Forget Password?", size: 12),
             ),
-            Card(
-              color: ColorConst.greenColor,
-              child: ListTile(
-                title: bolttext(text: "SIGN IN", color: Colors.white),
-                onTap: () {},
-              ),
-            ),
+            myBotton(title: "SIGN IN"),
             Padding(
               padding:
                   const EdgeInsets.symmetric(vertical: 24, horizontal: 147),
               child: greytext(text: "Or", size: 16),
             ),
-            Card(
-              color: ColorConst.blueDarkColor,
-              child: ListTile(
-                leading: Container(
-                    height: 28,
-                    width: 28,
-                    color: Colors.white,
-                    child: const Center(
-                      child: Icon(Icons.facebook_sharp,color: Colors.blue,)
-                    ),
-                  ),
-                title: bolttext(text: "CONNECT WITH FACEBOOK", color: Colors.white,align: TextAlign.start),
-                onTap: () {},
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8),
-              child: Card(
-                color: ColorConst.blueColor,
-                child: ListTile(
-                  leading: Container(
-                    height: 28,
-                    width: 28,
-                    color: Colors.white,
-                    child: const Center(
-                      child: Icon(Icons.laptop_mac_sharp,color: Colors.red,)
-                    ),
-                  ),
-                  title:bolttext(text: "CONNECT WITH GOOGLE", color: Colors.white,align: TextAlign.start),
-                  
-                  onTap: () {},
-                ),
-              ),
-            ),
+            myFacebookBotton(),
+            myGoogleBotton(),
           ],
         ),
       ),
