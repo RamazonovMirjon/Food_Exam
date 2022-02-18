@@ -12,7 +12,8 @@ class PasswordPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: myAppBar(context: context,title: bolttext(text: "Forgot Password", size: 16)),
+      appBar: myAppBar(
+          context: context, title: bolttext(text: "Forgot Password", size: 16)),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -41,7 +42,7 @@ class PasswordPage extends StatelessWidget {
             mytextfromfild(myhintText: "Full Name"),
             mytextfromfild(myhintText: "Email Address"),
             mytextfromfild(myhintText: "Password", scureText: true),
-            myBotton(title: "SIGG UP"),
+            myBotton(context, title: "SIGN UP"),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: greytext(

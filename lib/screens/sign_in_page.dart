@@ -22,14 +22,13 @@ class SignInPage extends StatelessWidget {
           children: [
             bolttext(text: "Welcome to", size: 34),
             Padding(
-              padding: const EdgeInsets.only(top: 10),
+              padding: const EdgeInsets.only(top: 20),
               child:
                   greytext(text: "Enter your Phone number or Email", size: 16),
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                greytext(text: "for sign in, Or ", size: 16),
+                greytext(text: "for sign in, Or", size: 16),
                 CupertinoButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/signup');
@@ -37,18 +36,18 @@ class SignInPage extends StatelessWidget {
                   child: greytext(
                       text: "Create new account.",
                       size: 16,
-                      color: ColorConst.blueColor),
+                      color: ColorConst.greenColor),
                 ),
               ],
             ),
             mytextfromfild(myhintText: "Name"),
-            mytextfromfild(myhintText: "Password",scureText: true),
+            mytextfromfild(myhintText: "Password", scureText: true),
             Padding(
               padding:
                   const EdgeInsets.symmetric(vertical: 20, horizontal: 110),
               child: greytext(text: "Forget Password?", size: 12),
             ),
-            myBotton(title: "SIGN IN"),
+            myBotton(context, title: "SIGN IN"),
             Padding(
               padding:
                   const EdgeInsets.symmetric(vertical: 24, horizontal: 147),

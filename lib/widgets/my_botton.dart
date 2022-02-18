@@ -4,11 +4,13 @@ import 'Texts.dart';
 
 
 //Sing in va Sign up buttoni
-Widget myBotton({required String title}) => Card(
+Widget myBotton(BuildContext context,{required String title}) => Card(
       color: ColorConst.greenColor,
       child: ListTile(
         title: bolttext(text: title, color: ColorConst.whiteColor),
-        onTap: () {},
+        onTap: () {
+          Navigator.pushNamed(context, '/homepage');
+        },
       ),
     );
 
@@ -38,6 +40,9 @@ Widget myFacebookBotton() => Card(
       ),
     );
 
+
+//google bottoni ikki joydaligi
+// uchun alohida nethod qildim.
 Widget myGoogleBotton() => Padding(
       padding: const EdgeInsets.only(top: 8),
       child: Card(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food/screens/sign_in_page.dart';
 import 'package:food/widgets/Texts.dart';
 
 class WalkThroughPage extends StatefulWidget {
@@ -26,12 +25,12 @@ class _WalkThroughPageState extends State<WalkThroughPage> {
       body: Column(
         children: [
           const Padding(
-            padding: EdgeInsets.only(left: 34.0, top: 68.7, right: 33.46),
+            padding: EdgeInsets.only(left: 34, top: 68, right: 33),
             child: SizedBox(
-              height: 362.4,
-              width: 307.5,
+              height: 362,
+              width: 307,
               child: Image(
-                fit: BoxFit.cover,
+                fit: BoxFit.fill,
                 image: AssetImage("assets/images/pizza.png"),
               ),
             ),
