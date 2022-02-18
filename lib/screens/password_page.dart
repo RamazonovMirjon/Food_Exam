@@ -4,20 +4,20 @@ import 'package:food/widgets/Texts.dart';
 
 import '../widgets/my_appbar.dart';
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({Key? key}) : super(key: key);
+class PasswordPage extends StatelessWidget {
+  const PasswordPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myAppBar(title: bolttext(text: "Sign In", size: 16)),
+      appBar: myAppBar(title: bolttext(text: "Forgot Password", size: 16)),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            bolttext(text: "Welcome to", size: 34),
+            bolttext(text: "Create Account", size: 34),
             Padding(
               padding: const EdgeInsets.only(top: 10, bottom: 2),
               child:

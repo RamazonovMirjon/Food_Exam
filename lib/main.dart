@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food/core/constants/color_const.dart';
 import 'package:food/routes/my_route.dart';
+import 'package:food/screens/password_page.dart';
 import 'package:food/screens/sign_in_page.dart';
 
 void main() => runApp(MyApp());
@@ -19,6 +20,6 @@ class MyApp extends StatelessWidget {
           primary: ColorConst.blueColor,
         )),
         initialRoute: '/',
-        home: const SignInPage(),
+        home: const PasswordPage(),
       );
 }
