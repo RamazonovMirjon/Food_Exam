@@ -73,7 +73,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Image(image: AssetImage('assets/images/Banner.png')),
                   ),
                   scrollarTitle('Best Picks \nRestaurants by team'),
-                  const ScrollWidget(index: 3),
+                  const ScrollWidget(i: 2),
+                  scrollarTitle('All Restaurants'),
+                  const ScrollWidget(i: 4,scroll: Axis.vertical,rasmHight: 185,rasmWith: double.infinity,sizeBoxhight: 400),
+
+
+
                 ],
               ),
             ),

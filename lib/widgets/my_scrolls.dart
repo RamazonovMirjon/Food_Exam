@@ -5,31 +5,43 @@ import 'package:food/data/foot_data.dart';
 import 'Texts.dart';
 
 class ScrollWidget extends StatelessWidget {
-  final int index;
-  const ScrollWidget({Key? key, this.index = 0}) : super(key: key);
+  final int i;
+  final double rasmWith;
+  final double rasmHight;
+  final Axis scroll;
+  final double sizeBoxhight;
+  const ScrollWidget(
+      {Key? key,
+      this.i = 0,
+      this.rasmHight = 160,
+      this.rasmWith = 200,
+      this.scroll = Axis.horizontal,
+      this.sizeBoxhight = 256})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     var foodList = FoodData().foodList;
-    int a = index;
     return SizedBox(
-      height: 256,
+      height: sizeBoxhight,
       width: double.infinity,
       child: ListView.builder(
-        scrollDirection: Axis.horizontal,
+        scrollDirection: scroll,
+        controller: ScrollController(),
         itemBuilder: (BuildContext context, index) {
-          index += a;
+          //vazifasi indexga har safar a ni qushadi va bir marta data'ni aylanadi
+          index += i;
           index %= foodList.length;
           return Padding(
             padding: const EdgeInsets.all(5),
             child: SizedBox(
-              width: 200,
+              width: rasmWith,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Image(
-                    height: 160,
-                    width: 200,
+                    height: rasmHight,
+                    width: rasmWith,
                     image: AssetImage(foodList[index].image),
                     fit: BoxFit.cover,
                   ),
