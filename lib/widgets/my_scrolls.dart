@@ -10,13 +10,15 @@ class ScrollWidget extends StatelessWidget {
   final double rasmHight;
   final Axis scroll;
   final double sizeBoxhight;
+  final ScrollPhysics a;
   const ScrollWidget(
       {Key? key,
       this.i = 0,
       this.rasmHight = 160,
       this.rasmWith = 200,
       this.scroll = Axis.horizontal,
-      this.sizeBoxhight = 256})
+      this.sizeBoxhight = 256,
+      this.a = const ScrollPhysics()})
       : super(key: key);
 
   @override
@@ -26,7 +28,8 @@ class ScrollWidget extends StatelessWidget {
       height: sizeBoxhight,
       width: double.infinity,
       child: ListView.builder(
-      
+        shrinkWrap: true,
+         physics: a,
         scrollDirection: scroll,
         controller: ScrollController(),
         itemBuilder: (BuildContext context, index) {

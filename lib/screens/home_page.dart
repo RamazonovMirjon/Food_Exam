@@ -75,10 +75,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   scrollarTitle('Best Picks \nRestaurants by team'),
                   const ScrollWidget(i: 2),
                   scrollarTitle('All Restaurants'),
-                  const ScrollWidget(i: 4,scroll: Axis.vertical,rasmHight: 185,rasmWith: double.infinity,sizeBoxhight: 400),
-
-
-
+                  const ScrollWidget(
+                    i: 4,
+                    scroll: Axis.vertical,
+                    rasmHight: 185,
+                    rasmWith: double.infinity,
+                    sizeBoxhight: 800,
+                    a: NeverScrollableScrollPhysics(),
+                  ),
                 ],
               ),
             ),
