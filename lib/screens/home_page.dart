@@ -66,27 +66,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: const EdgeInsets.symmetric(horizontal: 13),
                 children: [
                   const Image(image: AssetImage('assets/images/Header.png')),
-                  Center(
-                    heightFactor: 2,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        bolttext(text: "Featured Partners", size: 24),
-                        greytext(
-                            text: 'See all',
-                            color: ColorConst.greenColor,
-                            size: 16)
-                      ],
-                    ),
-                  ),
-                  const Biribchiscroll(),
+                  scrollarTitle('Featured Partners'),
+                  const ScrollWidget(),
                   const Padding(
-                    padding:  EdgeInsets.symmetric(vertical: 34),
-                    child: Image(
-                        image: AssetImage('assets/images/Banner.png')
-                      ),
+                    padding: EdgeInsets.symmetric(vertical: 34),
+                    child: Image(image: AssetImage('assets/images/Banner.png')),
                   ),
-                  
+                  scrollarTitle('Best Picks \nRestaurants by team'),
+                  const ScrollWidget(index: 3),
                 ],
               ),
             ),
@@ -96,4 +83,19 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+
+  Center scrollarTitle(String title) => Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            bolttext(text: title, size: 24, align: TextAlign.start),
+            CupertinoButton(
+              child: greytext(
+                  text: 'See all', color: ColorConst.greenColor, size: 16),
+              onPressed: () {},
+            )
+          ],
+        ),
+      );
 }
