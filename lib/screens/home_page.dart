@@ -79,7 +79,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       ],
                     ),
                   ),
-                  const Biribchiscroll()
+                  const Biribchiscroll(),
+                  const Padding(
+                    padding:  EdgeInsets.symmetric(vertical: 34),
+                    child: Image(
+                        image: AssetImage('assets/images/Banner.png')
+                      ),
+                  ),
+                  
                 ],
               ),
             ),

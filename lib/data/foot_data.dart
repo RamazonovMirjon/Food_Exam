@@ -7,7 +7,7 @@ class FoodData {
         title: 'Daylingh Coffe',
         subtitle: 'Colarodo, San Francisco',
         filial: 'Free delivery',
-        image: 'assets/images/osh1',
+        image: 'assets/images/osh1.png',
         reyting: 4.5,
         time: 45),
     Food(
@@ -15,12 +15,12 @@ class FoodData {
         title: 'Mario Italiano',
         subtitle: 'Colarodo, San Francisco',
         filial: 'Free delivery',
-        image: 'assets/images/osh2',
+        image: 'assets/images/osh2.png',
         reyting: 4.5,
         time: 45),
     Food(
       id: 3,
-      image: 'assets/images/osh3',
+      image: 'assets/images/osh3.png',
       title: "McDonald’s",
       subtitle: 'Colarodo, San Francisco',
       filial: 'Free delivery',
@@ -29,7 +29,7 @@ class FoodData {
     ),
     Food(
       id: 4,
-      image: 'assets/images/osh4',
+      image: 'assets/images/osh4.png',
       title: 'The Halal Guys',
       subtitle: 'Colarodo, San Francisco',
       filial: 'Free delivery',
@@ -38,7 +38,7 @@ class FoodData {
     ),
     Food(
       id: 50,
-      image: 'assets/images/osh50',
+      image: 'assets/images/osh50.png',
       title: "McDonald's",
       subtitle: '\$\$ | Chinese | American | Deshi food',
       filial: '200+ Ratings',
@@ -47,7 +47,7 @@ class FoodData {
     ),
     Food(
       id: 60,
-      image: 'assets/images/osh60',
+      image: 'assets/images/osh60.png',
       title: "Cafe Brichor’s",
       subtitle: '\$\$ | Chinese | American | Sea food',
       filial: '100+ Ratings',
@@ -56,7 +56,7 @@ class FoodData {
     ),
     Food(
       id: 50,
-      image: 'assets/images/osh50',
+      image: 'assets/images/osh50.png',
       title: "McDonald's",
       subtitle: '\$\$ | Chinese | American | Deshi food',
       filial: '200+ Ratings',
@@ -65,7 +65,7 @@ class FoodData {
     ),
     Food(
       id: 70,
-      image: 'assets/images/osh70',
+      image: 'assets/images/osh70.png',
       title: "Cafe Chinor",
       subtitle: '\$\$ | Indian | British | Sea food',
       filial: '300+ Ratings',
@@ -74,7 +74,7 @@ class FoodData {
     ),
     Food(
       id: 80,
-      image: 'assets/images/osh80',
+      image: 'assets/images/osh80.png',
       title: 'Cafe Bukhara',
       subtitle: 'sum | Uzbekish | Milliy | shashlik',
       filial: '350+ Ratings',
