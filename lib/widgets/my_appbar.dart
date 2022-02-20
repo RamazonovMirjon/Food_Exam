@@ -4,6 +4,7 @@ import 'package:food/core/constants/color_const.dart';
 PreferredSizeWidget myAppBar({BuildContext? context,
         Widget title = const Text(''), List<Widget>? listIcon}) =>
     AppBar(
+      
       toolbarHeight: 44,
       backgroundColor: Colors.transparent,
       elevation: 0,
@@ -23,6 +24,6 @@ PreferredSizeWidget myAppBar({BuildContext? context,
       title: title,
       centerTitle: true,
 
-      //5 sahifadagi appbar uchun iconlar
+      //final sahifadagi appbar uchun iconlar
       actions: listIcon,
     );

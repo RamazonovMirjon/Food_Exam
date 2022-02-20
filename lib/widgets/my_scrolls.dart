@@ -26,6 +26,7 @@ class ScrollWidget extends StatelessWidget {
       height: sizeBoxhight,
       width: double.infinity,
       child: ListView.builder(
+      
         scrollDirection: scroll,
         controller: ScrollController(),
         itemBuilder: (BuildContext context, index) {
