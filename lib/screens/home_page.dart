@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:food/core/constants/color_const.dart';
 import 'package:food/widgets/Texts.dart';
 
+import '../widgets/my_scrolls.dart';
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
@@ -77,43 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: 256,
-                    width: double.infinity,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (BuildContext context, int index) => Padding(
-                        padding: const EdgeInsets.all(5),
-                        child: SizedBox(
-                          width: 200,
-                        
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image(
-                                height: 160,
-                                width: 200,
-                                image: AssetImage(
-                                    'assets/images/osh${(index) % 2 + 1}.png'),
-                                fit: BoxFit.fill,
-                              ),
-                              bolttext(text: "Coffe $index"),
-                              greytext(text: 'choy $index'),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Container(),
-                                  greytext(text: 'text'),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      itemCount: 10,
-                    ),
-                  )
+                  const Biribchiscroll()
                 ],
               ),
             ),
