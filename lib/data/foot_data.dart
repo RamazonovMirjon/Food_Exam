@@ -1,5 +1,5 @@
 import 'package:food/model/food_model.dart';
-
+//homePage uchun data
 class FoodData {
   List<Food> foodList = [
     Food(

@@ -9,7 +9,7 @@ import 'package:food/widgets/Texts.dart';
 import '../widgets/my_appbar.dart';
 
 class FinalPage extends StatefulWidget {
-  final int pageNum;
+  final int pageNum; // bu son homePagedan keladi aynan scroll widgetidan keladi
   const FinalPage({Key? key, this.pageNum = 0}) : super(key: key);
 
   @override
@@ -17,8 +17,8 @@ class FinalPage extends StatefulWidget {
 }
 
 class _FinalPageState extends State<FinalPage> {
-  final fFoods = FinalFoodData();
-  final fCards = FinalCardData();
+  final fFoods = FinalFoodData(); //finalfooddata clasini uzlashtirib oladi qaysi raqam kelsa ishlatishi uchun
+  final fCards = FinalCardData(); // bu ham
   @override
   Widget build(BuildContext context) {
     final Food foods = FoodData().foodList[widget.pageNum];
@@ -139,6 +139,7 @@ class _FinalPageState extends State<FinalPage> {
     );
   }
 
+//card uchun
   Widget cards(int index) => Container(
         width: 140,
         height: 198,
@@ -154,6 +155,7 @@ class _FinalPageState extends State<FinalPage> {
         ),
       );
 
+//food uchun
   Widget ffoods(int index) => Container(
       margin: const EdgeInsets.all(20),
       width: double.infinity,

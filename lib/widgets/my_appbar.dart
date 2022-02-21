@@ -14,7 +14,7 @@ PreferredSizeWidget myAppBar({BuildContext? context,
           Icons.arrow_back_ios_outlined,
 
         ),
-        
+        //orqaga qaytish uchun
         onPressed: () {
           
           Navigator.pop(context!);

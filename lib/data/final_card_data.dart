@@ -1,5 +1,5 @@
 import 'package:food/model/final_card_model.dart';
-
+//final pagidagi cardlar uchun data
 class FinalCardData {
   List<FinalCard> finalCardList = [
     FinalCard(

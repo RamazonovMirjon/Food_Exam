@@ -5,16 +5,16 @@ import 'package:food/data/foot_data.dart';
 import 'Texts.dart';
 
 class ScrollWidget extends StatelessWidget {
-  final int i;
-  final double rasmWith;
-  final double rasmHight;
-  final Axis scroll;
-  final double sizeBoxhight;
-  final ScrollPhysics a;
+  final int i; // i bu yerda qaysi rasmdan boshlash kerakligini aniqlaydi
+  final double rasmWith;  //rasm olchami - sababi bu clasni ikki joyda ishlatganman
+  final double rasmHight; // yuqoridagi gap
+  final Axis scroll;   // ikki joyda ishlatganim uchun scrollar ikki xil
+  final double sizeBoxhight; // buyam ikki joydaligi uchun
+  final ScrollPhysics a; //sikrolni tuxtatadi bittasiga bor bittasiga yuq
   const ScrollWidget(
       {Key? key,
       this.i = 0,
-      this.rasmHight = 160,
+      this.rasmHight = 160,    //birichi 2 ta ishlatganimni qiymatlari
       this.rasmWith = 200,
       this.scroll = Axis.horizontal,
       this.sizeBoxhight = 256,
@@ -25,7 +25,7 @@ class ScrollWidget extends StatelessWidget {
   Widget build(
     BuildContext context,
   ) {
-    var foodList = FoodData().foodList;
+    var foodList = FoodData().foodList;  //FoodDatadagi listni uzlashtirib oldim
     return SizedBox(
       height: sizeBoxhight,
       width: double.infinity,
@@ -40,7 +40,7 @@ class ScrollWidget extends StatelessWidget {
           index %= foodList.length;
           return InkWell(
             onTap: () {
-              Navigator.pushNamed(
+              Navigator.pushNamed(  //bu qism ayni final pagega malumot yuboradigan qism
                 context,
                 "/finalpage",
                 arguments: index,
@@ -81,6 +81,7 @@ class ScrollWidget extends StatelessWidget {
     );
   }
 
+// containercha reyting berilgan kok qismcha uchun
   Widget reyting(foodList, index) => Container(
         height: 20,
         width: 36,

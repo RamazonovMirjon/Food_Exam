@@ -10,11 +10,13 @@ class WalkThroughPage extends StatefulWidget {
 
 class _WalkThroughPageState extends State<WalkThroughPage> {
   @override
+  //vazifasi 3 sekun kutadi va signin pagega utadi
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       return Navigator.pushReplacementNamed(context, '/signin');
     });
+    //setStete qilishi kerak
     setState(() {});
   }
 

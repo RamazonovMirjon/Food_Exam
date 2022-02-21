@@ -19,7 +19,7 @@ class MyRoute {
         return MaterialPageRoute(builder: (context) => const PasswordPage());
       case '/homepage':
         return MaterialPageRoute(builder: (context) => const MyHomePage());
-      case '/finalpage':
+      case '/finalpage':                                                      //Listdagi Mapning indexini yuboryapti
         return MaterialPageRoute(builder: (context) =>  FinalPage(pageNum: (args as int) ,));
     }
     return null;

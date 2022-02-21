@@ -1,5 +1,5 @@
 import 'package:food/model/final_foot_model.dart';
-
+//final food uchun data
 class FinalFoodData {
   List<FinalFood> finalFoodList = [
     FinalFood(
