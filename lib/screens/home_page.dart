@@ -76,19 +76,56 @@ class _MyHomePageState extends State<MyHomePage> {
                   const ScrollWidget(i: 2),
                   scrollarTitle('All Restaurants'),
                   const ScrollWidget(
-
                     i: 4,
                     scroll: Axis.vertical,
                     rasmHight: 185,
                     rasmWith: double.infinity,
                     sizeBoxhight: 1500,
                     a: NeverScrollableScrollPhysics(),
-                    
                   ),
                 ],
               ),
             ),
-            Expanded(flex: 2, child: Row()),
+            Expanded(
+                flex: 2,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(children: [
+                      Icon(
+                        Icons.home,
+                        color: ColorConst.greenColor,
+                        size: 30,
+                      ),
+                      greytext(
+                          text: "Home", size: 12, color: ColorConst.greenColor),
+                    ]),
+                    Column(children: [
+                      Icon(
+                        Icons.search,
+                        color: ColorConst.greyColor,
+                        size: 30,
+                      ),
+                      greytext(text: "Home", size: 12),
+                    ]),
+                    Column(children: [
+                      Icon(
+                        Icons.book,
+                        color: ColorConst.greyColor,
+                        size: 30,
+                      ),
+                      greytext(text: "Orders", size: 12),
+                    ]),
+                    Column(children: [
+                      Icon(
+                        Icons.person,
+                        color: ColorConst.greyColor,
+                        size: 30,
+                      ),
+                      greytext(text: "Profile", size: 12),
+                    ]),
+                  ],
+                )),
           ],
         ),
       ),
