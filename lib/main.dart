@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.light(
           primary: ColorConst.blueColor,
         )),
-        // initialRoute: '/',
-        // onGenerateRoute: _myRoute.onGenerateRoute,
-        home: const FinalPage(),
+        initialRoute: '/',
+        onGenerateRoute: _myRoute.onGenerateRoute,
+        // home: const FinalPage(),
       );
 }

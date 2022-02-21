@@ -76,12 +76,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   const ScrollWidget(i: 2),
                   scrollarTitle('All Restaurants'),
                   const ScrollWidget(
+
                     i: 4,
                     scroll: Axis.vertical,
                     rasmHight: 185,
                     rasmWith: double.infinity,
-                    sizeBoxhight: 800,
+                    sizeBoxhight: 1500,
                     a: NeverScrollableScrollPhysics(),
+                    
                   ),
                 ],
               ),

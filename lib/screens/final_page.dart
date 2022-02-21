@@ -62,8 +62,14 @@ class _FinalPageState extends State<FinalPage> {
               margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
               height: 160,
               width: 335,
-              color: Colors.black,
-              child: Column(),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  bolttext(text: foods.title, size: 24),
+                  greytext(text: foods.subtitle, size: 16),
+                ],
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -79,9 +85,11 @@ class _FinalPageState extends State<FinalPage> {
                 itemCount: fCards.finalCardList.length * 3,
               ),
             ),
-            SizedBox(
+            Container(
+              alignment: Alignment.bottomCenter,
               width: double.infinity,
-              height: 50,
+              height: 40,
+              margin: const EdgeInsets.only(top: 60),
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
@@ -101,25 +109,30 @@ class _FinalPageState extends State<FinalPage> {
                 ],
               ),
             ),
-            bolttext(
-                text: '   Most Populars',
-                color: ColorConst.blackColor,
-                size: 20),
             SizedBox(
               width: double.infinity,
-              height: 2000,
+              height: 1000,
               child: ListView.separated(
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: fFoods.finalFoodList.length,
-                itemBuilder: (BuildContext contect, int index) => ffoods(index),
+                itemBuilder: (BuildContext contect, int index) => index == 0
+                    ? bolttext(
+                        text: '   Most Populars',
+                        align: TextAlign.start,
+                        color: ColorConst.blackColor,
+                        size: 20)
+                    : index == 3
+                        ? bolttext(
+                            text: '   Sea Food',
+                            align: TextAlign.start,
+                            color: ColorConst.blackColor,
+                            size: 20)
+                        : const Divider(),
                 separatorBuilder: (BuildContext contect, int index) =>
-                    const Divider(),
+                    ffoods(index),
               ),
             ),
-            Container(
-              height: 1000,
-            )
           ],
         ),
       ),
@@ -151,7 +164,7 @@ class _FinalPageState extends State<FinalPage> {
           Image(image: AssetImage(fFoods.finalFoodList[index].image)),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               bolttext(text: fFoods.finalFoodList[index].title, size: 18),
               SizedBox(

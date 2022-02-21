@@ -20,7 +20,7 @@ class MyRoute {
       case '/homepage':
         return MaterialPageRoute(builder: (context) => const MyHomePage());
       case '/finalpage':
-        return MaterialPageRoute(builder: (context) => const FinalPage());
+        return MaterialPageRoute(builder: (context) =>  FinalPage(pageNum: (args as int) ,));
     }
     return null;
   }

@@ -22,45 +22,56 @@ class ScrollWidget extends StatelessWidget {
       : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+  ) {
     var foodList = FoodData().foodList;
     return SizedBox(
       height: sizeBoxhight,
       width: double.infinity,
       child: ListView.builder(
         shrinkWrap: true,
-         physics: a,
+        physics: a,
         scrollDirection: scroll,
         controller: ScrollController(),
         itemBuilder: (BuildContext context, index) {
           //vazifasi indexga har safar a ni qushadi va bir marta data'ni aylanadi
           index += i;
           index %= foodList.length;
-          return Padding(
-            padding: const EdgeInsets.all(5),
-            child: SizedBox(
-              width: rasmWith,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Image(
-                    height: rasmHight,
-                    width: rasmWith,
-                    image: AssetImage(foodList[index].image),
-                    fit: BoxFit.cover,
-                  ),
-                  bolttext(text: foodList[index].title, size: 20),
-                  greytext(text: foodList[index].subtitle, size: 16),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      reyting(foodList, index),
-                      greytext(text: '${foodList[index].time}min'),
-                      greytext(text: '|'),
-                      greytext(text: foodList[index].filial),
-                    ],
-                  )
-                ],
+          return InkWell(
+            onTap: () {
+              Navigator.pushNamed(
+                context,
+                "/finalpage",
+                arguments: index,
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(5),
+              child: SizedBox(
+                width: rasmWith,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Image(
+                      height: rasmHight,
+                      width: rasmWith,
+                      image: AssetImage(foodList[index].image),
+                      fit: BoxFit.cover,
+                    ),
+                    bolttext(text: foodList[index].title, size: 20),
+                    greytext(text: foodList[index].subtitle, size: 16),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        reyting(foodList, index),
+                        greytext(text: '${foodList[index].time}min'),
+                        greytext(text: '|'),
+                        greytext(text: foodList[index].filial),
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           );
